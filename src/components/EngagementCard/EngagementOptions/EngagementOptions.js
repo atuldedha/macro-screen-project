@@ -9,7 +9,7 @@ const EngagementOptions = ({
   useArrow,
 }) => {
   return (
-    <div className="w-full flex items-center pt-[7px] md:pt-[15px] pb-[4px] md:pb-[16px] pl-[13px] md:pl-[22px] md:pr-[10px] space-x-[11px] bg-white rounded-xl shadow-xl">
+    <div className="w-full flex items-center pt-[7px] md:pt-[15px] pb-[4px] md:pb-[16px] pl-[13px] md:pl-[22px] md:pr-[10px] space-x-[11px] bg-white rounded-[12px] md:rounded-[18px] shadow-2xl">
       <img
         src={image}
         alt="icon"

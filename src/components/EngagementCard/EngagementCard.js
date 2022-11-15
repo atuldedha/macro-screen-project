@@ -9,7 +9,7 @@ const EngagementCard = () => {
   const [selected, setSelected] = useState(1);
   const monthName = months[new Date().getMonth()];
   return (
-    <div className="bg-lightGray h-full pt-[2px] pr-[22px] pl-[14px] pb-[30px] flex flex-col items-center rounded-xl">
+    <div className="bg-lightGray h-full pt-[2px] pr-[22px] pl-[14px] pb-[30px] flex flex-col items-center rounded-[22px] md:rounded-[30px]">
       <div className="flex items-center space-x-[20px] mb-[4px]">
         <img src={ArrowLeft} alt="arrowLeft" className="" />
         <span className="font-poppins font-bold text-[13px] md:text-[20px] leading-[20px] md:leading-[30px] text-lightPurple">

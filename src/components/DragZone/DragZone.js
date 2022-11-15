@@ -35,7 +35,7 @@ const DragZone = ({ images, setImages }) => {
   return (
     <form
       id="form-file-upload"
-      className="mt-2 relative text-center bg-lightGray"
+      className="relative text-center rounded-[30px] bg-lightGray"
       onDragEnter={handleDrag}
       onSubmit={(e) => e.preventDefault()}
     >
@@ -51,7 +51,7 @@ const DragZone = ({ images, setImages }) => {
         htmlFor="input-file-upload"
         className={`${
           dragActive ? "drag-active" : ""
-        } flex h-full w-full items-center justify-center border-[3px] border-dashed border-lightPurple rounded-xl`}
+        } flex h-full w-full items-center justify-center border-[3px] border-dashed border-lightPurple rounded-[30px]`}
       >
         <div className="mt-[80px] flex flex-col items-center px-[22px]">
           <img src={FileIcon} alt="drag" className="mb-[12px]" />

@@ -27,7 +27,7 @@ const RecentActivities = () => {
     });
   }, []);
   return (
-    <div className="bg-white rounded-2xl shadow-lg py-[6px] md:py-[20px] pl-[9px] md:pl-[30px] pr-[12px] md:pr-[40px] h-[70px] md:h-[230px] overflow-scroll flex flex-col">
+    <div className="bg-white rounded-3xl md:rounded-[36px] shadow-2xl py-[6px] md:py-[20px] pl-[9px] md:pl-[30px] pr-[12px] md:pr-[40px] h-[70px] md:h-[230px] overflow-scroll flex flex-col">
       <span className="text-customBlue font-poppins font-bold text-[8px] md:text-[25px] leading-[12px] md:leading-[40px]">
         Attività Recenti
       </span>

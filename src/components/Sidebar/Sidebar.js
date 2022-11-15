@@ -39,7 +39,7 @@ const Sidebar = ({ toggleSidebar }) => {
 
   return (
     <div
-      className="bg-white z-10 flex flex-col fixed md:absolute top-0 left-0 h-full overflow-scroll md:top-[53px] md:left-[58px] md:rounded-2xl shadow-xl md:h-[90%]"
+      className="bg-white z-10 flex flex-col fixed md:absolute top-0 left-0 h-full overflow-scroll md:top-[53px] md:left-[58px] md:rounded-[44px] md:shadow-2xl md:h-[970px]"
       ref={sidebarRef}
     >
       <img

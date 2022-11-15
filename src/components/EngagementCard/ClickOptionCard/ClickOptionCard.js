@@ -148,7 +148,7 @@ const ClickOptionCard = () => {
         </div>
       </div>
 
-      <div className="flex flex-col pt-[20px] pl-[22px] pr-[19px] bg-white rounded-xl shadow-lg">
+      <div className="flex flex-col pt-[20px] pl-[22px] pr-[19px] bg-white rounded-[18px] shadow-2xl">
         <div className="flex items-center justify-between mb-[28px]">
           <div className="flex items-center space-x-[12px]">
             <img

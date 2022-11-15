@@ -145,7 +145,7 @@ const InfoCard = ({ data }) => {
       });
   }, []);
   return (
-    <div className="bg-[#A3A2D8] rounded-xl flex flex-col items-center px-[22px] md:px-[58px]">
+    <div className="bg-[#A3A2D8] rounded-[24px] md:rounded-[28px] flex flex-col items-center px-[22px] md:px-[58px]">
       <div className="flex items-center mt-[17px] space-x-[14px]">
         <EventInfoCard
           eventName="Eventi da pubblicare"
