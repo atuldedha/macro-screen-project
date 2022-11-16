@@ -5,8 +5,9 @@ import EventInfoCard from "./EventInfoCard/EventInfoCard";
 import TotalInfo from "./TotalInfo/TotalInfo";
 
 const InfoCard = ({ data }) => {
-  const [licenseDate, setLicenseDate] = useState();
-  const [eventPublication, setEventPublication] = useState();
+  const [licenseDate, setLicenseDate] = useState(0);
+  const [eventPublication, setEventPublication] = useState(0);
+  const [eventName, setEventName] = useState("");
 
   useEffect(() => {
     getDoc(doc(db, "Customers", "d0bqIyQ9wx0FGrRhglRh"))
@@ -139,6 +140,20 @@ const InfoCard = ({ data }) => {
             setEventPublication(document.data().eventNum);
           }
         }
+        if (document.data().eventSelectedDocumentId) {
+          getDoc(
+            doc(
+              db,
+              "Events",
+              document
+                .data()
+                .eventSelectedDocumentId.toString()
+                .replace(/\s+/, "")
+            )
+          ).then((newDoc) => {
+            setEventName(newDoc.data().eventName.en);
+          });
+        }
       })
       .catch((error) => {
         console.log(error);
@@ -160,7 +175,7 @@ const InfoCard = ({ data }) => {
       </div>
 
       <span className="font-poppins font-bold text-[13px] md:text-[35px] leading-[19.5px] md:leading-[52px] text-lightGray mt-[15px] mb-[6px] md:mt-[34px] md:mb-[10px]">
-        Festival di ischia
+        {eventName}
       </span>
 
       <div className="mb-[18px] w-full md:mb-[45px]">
