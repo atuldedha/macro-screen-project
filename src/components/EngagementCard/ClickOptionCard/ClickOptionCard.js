@@ -13,7 +13,7 @@ import Application2 from "../../../images/application2.png";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../../../firebase";
 
-const ClickOptionCard = () => {
+const ClickOptionCard = ({ monthNumber }) => {
   const [statsType0, setStatsType0] = useState(0);
   const [statsType2, setStatsType2] = useState(0);
   const [statsType3, setStatsType3] = useState(0);
@@ -48,7 +48,7 @@ const ClickOptionCard = () => {
                     if (
                       doc.data().statsType === 0 &&
                       new Date(doc.data().timestamp.toDate()).getMonth() ===
-                        new Date().getMonth()
+                        monthNumber
                     ) {
                       stats0 += 1;
                     }
@@ -56,7 +56,7 @@ const ClickOptionCard = () => {
                     if (
                       doc.data().statsType === 2 &&
                       new Date(doc.data().timestamp.toDate()).getMonth() ===
-                        new Date().getMonth()
+                        monthNumber
                     ) {
                       stats2 += 1;
                     }
@@ -64,7 +64,7 @@ const ClickOptionCard = () => {
                     if (
                       doc.data().statsType === 3 &&
                       new Date(doc.data().timestamp.toDate()).getMonth() ===
-                        new Date().getMonth()
+                        monthNumber
                     ) {
                       stats3 += 1;
                     }
@@ -72,7 +72,7 @@ const ClickOptionCard = () => {
                     if (
                       doc.data().statsType === 4 &&
                       new Date(doc.data().timestamp.toDate()).getMonth() ===
-                        new Date().getMonth()
+                        monthNumber
                     ) {
                       stats4 += 1;
                     }
@@ -80,7 +80,7 @@ const ClickOptionCard = () => {
                     if (
                       doc.data().statsType === 5 &&
                       new Date(doc.data().timestamp.toDate()).getMonth() ===
-                        new Date().getMonth()
+                        monthNumber
                     ) {
                       stats5 += 1;
                     }
@@ -88,7 +88,7 @@ const ClickOptionCard = () => {
                     if (
                       doc.data().statsType === 8 &&
                       new Date(doc.data().timestamp.toDate()).getMonth() ===
-                        new Date().getMonth()
+                        monthNumber
                     ) {
                       stats8 += 1;
                     }
@@ -96,7 +96,7 @@ const ClickOptionCard = () => {
                     if (
                       doc.data().statsType === 10 &&
                       new Date(doc.data().timestamp.toDate()).getMonth() ===
-                        new Date().getMonth()
+                        monthNumber
                     ) {
                       stats10 += 1;
                     }
@@ -125,7 +125,7 @@ const ClickOptionCard = () => {
       .catch((error) => {
         console.log(error);
       });
-  }, []);
+  }, [monthNumber]);
   return (
     <div className="flex flex-col w-full">
       <div className="flex items-center space-x-[22px] mb-[28px]">

@@ -68,7 +68,7 @@ const EngagementCard = () => {
       </div>
 
       {selected === 1 && <EngagementOptionCard monthNumber={currentMonth} />}
-      {selected === 2 && <ClickOptionCard />}
+      {selected === 2 && <ClickOptionCard monthNumber={currentMonth} />}
     </div>
   );
 };
