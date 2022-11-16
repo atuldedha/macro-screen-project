@@ -154,9 +154,9 @@ const ClickOptionCard = () => {
             <img
               src={TapIcon}
               alt="icon"
-              className="h-[16px] w-[16px] object-contain"
+              className="h-[16px] md:h-[28px] w-[16px] md:w-[28px] object-contain"
             />
-            <span className="font-poppins font-medium text-[12px] leading-[25px] text-customBlue">
+            <span className="font-poppins font-medium text-[12px] md:text-[20px] leading-[25px] md:leading-[30px] text-customBlue">
               {totalStatsClick} click totali
             </span>
           </div>
@@ -164,7 +164,7 @@ const ClickOptionCard = () => {
           <img
             src={DotsIcon}
             alt="icon"
-            className="h-[16px] w-[16px] object-contain text-end"
+            className="h-[16px] md:h-[24px] w-[16px] md:w-[24px] object-contain text-end"
           />
         </div>
 

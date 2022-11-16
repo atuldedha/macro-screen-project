@@ -16,7 +16,11 @@ const EngagementOptions = ({
         className="h-[16px] md:h-[26px] w-[16px] md:w-[26px] object-contain"
       />
 
-      <div className="flex flex-col items-center justify-center w-full">
+      <div
+        className={`${
+          useArrow ? "ml-[14px]" : "ml-[0px]"
+        } flex flex-col items-center justify-center w-full`}
+      >
         <span className="font-poppins font-bold md:font-semibold text-customBlue text-[12px] md:text-[25px] leading-[18px] md:leading-[40px] md:mr-[5px]">
           {text}
         </span>
