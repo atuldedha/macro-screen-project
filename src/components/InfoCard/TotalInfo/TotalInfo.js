@@ -66,7 +66,7 @@ const TotalInfo = () => {
   }, []);
   return (
     <div className="bg-darkGray px-[19px] md:px-[47px] pt-[10px] md:pt-[28px] pb-[8px] md:pb-[20px] rounded-2xl md:rounded-[34px]">
-      <div className="flex items-center justify-between w-full space-x-[29px] mb-[9px]">
+      <div className="flex items-center justify-between w-full space-x-[22px] mb-[9px]">
         <div className="basis-1/3">
           <TotalInfoOption
             image={ViewIcon}

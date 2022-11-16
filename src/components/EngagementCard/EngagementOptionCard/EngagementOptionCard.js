@@ -65,7 +65,7 @@ const EngagementOptionCard = ({ monthNumber }) => {
   }, [monthNumber]);
   return (
     <div className="flex flex-col w-full">
-      <div className="flex items-center space-x-[22px] mb-[11px]">
+      <div className="flex items-center space-x-[15px] mb-[11px]">
         <div className="basis-1/2">
           <EngagementOptions
             image={ViewIcon}

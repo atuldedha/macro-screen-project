@@ -6,7 +6,7 @@ const TotalInfoOption = ({ image, count, text }) => {
       <img
         src={image}
         alt="icon"
-        className="h-[15px] md:h-[36px] w-[15px] md:w-[36px] object-contain"
+        className="h-[15px] md:h-[34px] w-[15px] md:w-[34px] object-contain"
       />
       <div className="flex flex-col items-center pr-[4px]">
         <span className="font-poppins font-bold text-[13px] md:text-[25px] leading-[20px] md:leading-[35px] text-black1">
