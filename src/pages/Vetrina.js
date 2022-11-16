@@ -183,9 +183,6 @@ const Vetrina = () => {
       <div className="flex flex-col md:flex-row">
         <div className="flex flex-col pt-[59px] px-[22px] mb-[15px] md:pt-0 md:px-0 md:basis-2/5">
           <DragZone images={images} setImages={setImages} />
-          <div className="hidden md:flex md:mt-[46px] items-center justify-center">
-            <img src={BigPhoneIcon} alt="phone" className="w-[70%] h-[650px]" />
-          </div>
         </div>
 
         <div className="flex flex-col px-[22px] mb-[60px] md:basis-3/5">
@@ -271,7 +268,7 @@ const Vetrina = () => {
               className="h-[25px] w-[25px] md:w-[35px] md:h-[35px] object-contain"
             />
             <input
-              type="text"
+              type="number"
               name="wPhoneNumber"
               value={formData.wPhoneNumber}
               onChange={handleChange}

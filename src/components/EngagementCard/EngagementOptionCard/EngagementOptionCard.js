@@ -2,11 +2,10 @@ import React, { useEffect, useState } from "react";
 import EngagementOptions from "../EngagementOptions/EngagementOptions";
 import ViewIcon from "../../../images/viewBlue.png";
 import ShareIcon from "../../../images/shareBlue.png";
-import ClockIcon from "../../../images/clockBlue.png";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../../../firebase";
 
-const EngagementOptionCard = () => {
+const EngagementOptionCard = ({ monthNumber }) => {
   const [statsType1, setStatsType1] = useState(0);
   const [statsType7, setStatsType7] = useState(0);
   useEffect(() => {
@@ -27,10 +26,14 @@ const EngagementOptionCard = () => {
                   let stats1 = 0;
                   let stats7 = 0;
                   allStatSnapshot.docs.forEach((doc) => {
+                    console.log(
+                      new Date(doc.data().timestamp.toDate()).getMonth(),
+                      monthNumber
+                    );
                     if (
                       doc.data().statsType === 1 &&
                       new Date(doc.data().timestamp.toDate()).getMonth() ===
-                        new Date().getMonth()
+                        monthNumber
                     ) {
                       stats1 += 1;
                     }
@@ -38,7 +41,7 @@ const EngagementOptionCard = () => {
                     if (
                       doc.data().statsType === 7 &&
                       new Date(doc.data().timestamp.toDate()).getMonth() ===
-                        new Date().getMonth()
+                        monthNumber
                     ) {
                       stats7 += 1;
                     }
@@ -59,7 +62,7 @@ const EngagementOptionCard = () => {
       .catch((error) => {
         console.log(error);
       });
-  }, []);
+  }, [monthNumber]);
   return (
     <div className="flex flex-col w-full">
       <div className="flex items-center space-x-[22px] mb-[11px]">
@@ -79,13 +82,6 @@ const EngagementOptionCard = () => {
           />
         </div>
       </div>
-
-      <EngagementOptions
-        image={ClockIcon}
-        text="20 sec"
-        subText="Tempo Medio sulla Pagina"
-        useBigSubtext
-      />
     </div>
   );
 };

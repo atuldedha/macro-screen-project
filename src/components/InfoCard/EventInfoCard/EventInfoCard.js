@@ -7,7 +7,7 @@ const EventInfoCard = ({ eventName, number, useSubtext, subText }) => {
         {eventName}
       </span>
 
-      <div className="flex items-center">
+      <div className="flex items-center w-full justify-center md:ml-[11px]">
         <span className="font-poppins font-bold text-[19px] md:text-[30px] text-customBlue leading-[28px] md:leading-[40px]">
           {number}
         </span>

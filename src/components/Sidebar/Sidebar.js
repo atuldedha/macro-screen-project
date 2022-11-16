@@ -2,9 +2,12 @@ import React, { useEffect, useRef, useState } from "react";
 import Logo from "../../images/logo.png";
 import CloseIcon from "../../images/closeBlue.png";
 import ExitIcon from "../../images/exitIcon.png";
-import HomeIcon from "../../images/homeBlue.png";
-import OnlineIcon from "../../images/onlineBlue.png";
-import CheckIcon from "../../images/checkBlue.png";
+import HomeIcon from "../../images/homeBlue2.png";
+import HomeIconFaded from "../../images/homeBlueFaded.png";
+import OnlineIcon from "../../images/onlineBlue2.png";
+import OnlineIconFaded from "../../images/onlineBlueFaded.png";
+import CheckIcon from "../../images/checkBlue2.png";
+import CheckIconFaded from "../../images/checkBlueFaded.png";
 import { useLocation, useNavigate } from "react-router-dom";
 
 const Sidebar = ({ toggleSidebar }) => {
@@ -39,7 +42,7 @@ const Sidebar = ({ toggleSidebar }) => {
 
   return (
     <div
-      className="bg-white z-10 flex flex-col fixed md:absolute top-0 left-0 h-full overflow-scroll md:top-[53px] md:left-[58px] md:rounded-[44px] md:shadow-2xl md:h-[970px]"
+      className="bg-white z-10 flex flex-col fixed md:absolute top-0 left-0 h-full overflow-scroll md:top-[53px] md:left-[58px] md:rounded-[44px] md:shadow-2xl md:h-[770px]"
       ref={sidebarRef}
     >
       <img
@@ -68,13 +71,15 @@ const Sidebar = ({ toggleSidebar }) => {
           }}
         >
           <img
-            src={HomeIcon}
+            src={selected === 1 ? HomeIcon : HomeIconFaded}
             alt="home"
-            className={`${
-              selected === 1 ? "opacity-100" : "opacity-50"
-            } w-[24px] h-[23px] object-contain`}
+            className={`w-[24px] h-[23px] object-contain`}
           />
-          <span className="font-poppins font-semibold text-customBlue text-[14px] leading-[21px]">
+          <span
+            className={`${
+              selected === 1 ? "opacity-[1]" : "opacity-60"
+            } font-poppins font-semibold text-customBlue text-[14px] leading-[21px]"`}
+          >
             Dashboard
           </span>
         </div>
@@ -89,13 +94,15 @@ const Sidebar = ({ toggleSidebar }) => {
           }}
         >
           <img
-            src={OnlineIcon}
+            src={selected === 2 ? OnlineIcon : OnlineIconFaded}
             alt="home"
-            className={`${
-              selected === 2 ? "opacity-100" : "opacity-50"
-            } w-[24px] h-[23px] object-contain`}
+            className={`w-[24px] h-[23px] object-contain`}
           />
-          <span className="font-poppins font-semibold text-customBlue text-[14px] leading-[21px]">
+          <span
+            className={`${
+              selected === 2 ? "opacity-[1]" : "opacity-60"
+            } font-poppins font-semibold text-customBlue text-[14px] leading-[21px]"`}
+          >
             Vetrina
           </span>
         </div>
@@ -107,13 +114,15 @@ const Sidebar = ({ toggleSidebar }) => {
           onClick={() => setSelected(3)}
         >
           <img
-            src={CheckIcon}
+            src={selected === 3 ? CheckIcon : CheckIconFaded}
             alt="home"
-            className={`${
-              selected === 3 ? "opacity-100" : "opacity-50"
-            } w-[24px] h-[23px] object-contain`}
+            className={`w-[24px] h-[23px] object-contain`}
           />
-          <span className="font-poppins font-semibold text-customBlue text-[14px] leading-[21px]">
+          <span
+            className={`${
+              selected === 3 ? "opacity-[1]" : "opacity-60"
+            } font-poppins font-semibold text-customBlue text-[14px] leading-[21px]"`}
+          >
             Eventi
           </span>
         </div>
