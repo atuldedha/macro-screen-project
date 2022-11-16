@@ -69,7 +69,7 @@ const Vetrina = () => {
     let data = {
       wShopName: formData.wShopName,
       wDescription: formData.wDescription,
-      wPhoneNumber: formData.wPhoneNumber,
+      wPhoneNumber: parseInt(formData.wPhoneNumber),
       wFirstLink: formData.wFirstLink,
       wFirstLinkName: formData.wFirstLinkName,
       wSecondLink: formData.wSecondLink,
@@ -164,7 +164,7 @@ const Vetrina = () => {
         setFormData({
           wShopName: document.data().wShopName,
           wDescription: document.data().wDescription,
-          wPhoneNumber: document.data().wPhoneNumber,
+          wPhoneNumber: parseInt(document.data().wPhoneNumber),
           wFirstLink: document.data().wFirstLink,
           wFirstLinkName: document.data().wFirstLinkName,
           wSecondLink: document.data().wSecondLink,
@@ -270,7 +270,7 @@ const Vetrina = () => {
             <input
               type="number"
               name="wPhoneNumber"
-              value={formData.wPhoneNumber}
+              value={parseInt(formData.wPhoneNumber)}
               onChange={handleChange}
               placeholder="Numero di Telefono"
               className="flex-grow bg-inherit text-black1 font-poppins font-normal text-[14px] md:text-[25px] leading-[21px] md:leading-[35px] outline-none"
