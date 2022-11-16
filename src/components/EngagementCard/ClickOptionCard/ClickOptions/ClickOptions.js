@@ -1,5 +1,4 @@
 import React from "react";
-import ArrowIcon from "../../../../images/arrowRightGray.png";
 
 const ClickOptions = ({ image, number }) => {
   return (
@@ -14,12 +13,6 @@ const ClickOptions = ({ image, number }) => {
           {number} Click
         </span>
       </div>
-
-      <img
-        src={ArrowIcon}
-        alt="arrow"
-        className="h-[10px] w-[14px] object-contain"
-      />
     </div>
   );
 };

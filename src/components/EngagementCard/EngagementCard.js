@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import ArrowLeft from "../../images/arrowLeft.png";
-import ArrowRight from "../../images/arrowRight.png";
+import ArrowLeft from "../../images/arrowLeftNew.png";
+import ArrowRight from "../../images/arrowRightNew.png";
 import ClickOptionCard from "./ClickOptionCard/ClickOptionCard";
 import EngagementOptionCard from "./EngagementOptionCard/EngagementOptionCard";
 import months from "../../utils/getMonths";
@@ -33,7 +33,9 @@ const EngagementCard = () => {
         <img
           src={ArrowLeft}
           alt="arrowLeft"
-          className="hover:cursor-pointer"
+          className={`${
+            monthName === months[0] ? "opacity-50" : "opacity-100"
+          } h-[12px] w-[8px] hover:cursor-pointer`}
           onClick={handlePreviousMonth}
         />
         <span className="font-poppins font-bold text-[13px] md:text-[20px] leading-[20px] md:leading-[30px] text-lightPurple">
@@ -42,7 +44,11 @@ const EngagementCard = () => {
         <img
           src={ArrowRight}
           alt="arrowRight"
-          className="hover:cursor-pointer"
+          className={`${
+            monthName === months[new Date().getMonth()]
+              ? "opacity-50"
+              : "opacity-100"
+          } h-[12px] w-[8px] hover:cursor-pointer`}
           onClick={handleAheadMonth}
         />
       </div>

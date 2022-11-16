@@ -3,13 +3,12 @@ import EngagementOptions from "../EngagementOptions/EngagementOptions";
 import HeartIcon from "../../../images/heartBlue.png";
 import LocationIcon from "../../../images/locationBlue.png";
 import TapIcon from "../../../images/tapBlue.png";
-import DotsIcon from "../../../images/dotsBlue.png";
 import ClickOptions from "./ClickOptions/ClickOptions";
-import PhoneIcon from "../../../images/call.png";
-import FacebookIcon from "../../../images/facebook.png";
-import InstagramIcon from "../../../images/instagram.png";
-import Application1 from "../../../images/application.png";
-import Application2 from "../../../images/application2.png";
+import PhoneIcon from "../../../images/callNew.png";
+import FacebookIcon from "../../../images/facebookNew.png";
+import InstagramIcon from "../../../images/instagramNew.png";
+import Application1 from "../../../images/clickApplicationIcon.png";
+import Application2 from "../../../images/clickApplicationIcon.png";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../../../firebase";
 
@@ -134,7 +133,6 @@ const ClickOptionCard = ({ monthNumber }) => {
             image={HeartIcon}
             text={statsType2}
             subText="Views totali"
-            useArrow
           />
         </div>
 
@@ -143,13 +141,12 @@ const ClickOptionCard = ({ monthNumber }) => {
             image={LocationIcon}
             text={statsType8}
             subText="Condivisioni"
-            useArrow
           />
         </div>
       </div>
 
       <div className="flex flex-col pt-[20px] pl-[22px] pr-[19px] bg-white rounded-[18px] shadow-2xl">
-        <div className="flex items-center justify-between mb-[28px]">
+        <div className="flex items-center justify-between mb-[15px]">
           <div className="flex items-center space-x-[12px]">
             <img
               src={TapIcon}
@@ -160,27 +157,21 @@ const ClickOptionCard = ({ monthNumber }) => {
               {totalStatsClick} click totali
             </span>
           </div>
-
-          <img
-            src={DotsIcon}
-            alt="icon"
-            className="h-[16px] md:h-[24px] w-[16px] md:w-[24px] object-contain text-end"
-          />
         </div>
 
-        <div className="pb-[10px]">
+        <div className="pb-[8px]">
           <ClickOptions number={statsType3} image={PhoneIcon} />
         </div>
-        <div className="pb-[10px]">
+        <div className="pb-[8px]">
           <ClickOptions number={statsType4} image={FacebookIcon} />
         </div>
-        <div className="pb-[10px]">
+        <div className="pb-[8px]">
           <ClickOptions number={statsType5} image={InstagramIcon} />
         </div>
-        <div className="pb-[10px]">
+        <div className="pb-[8px]">
           <ClickOptions number={statsType0} image={Application1} />
         </div>
-        <div className="pb-[27px]">
+        <div className="pb-[15px]">
           <ClickOptions number={statsType10} image={Application2} />
         </div>
       </div>
