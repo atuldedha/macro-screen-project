@@ -5,6 +5,7 @@ import RecentActivitiesCard from "./RecentActivitiesard/RecentActivitiesCard";
 
 const RecentActivities = () => {
   const [data, setData] = useState([]);
+
   useEffect(() => {
     getDocs(collection(db, "Customers")).then((snapshot) => {
       const q = query(
@@ -21,9 +22,12 @@ const RecentActivities = () => {
             ).toLocaleDateString(),
             timestamp: new Date(
               document.data()?.timestamp.toMillis()
-            ).toLocaleTimeString(),
+            ).toLocaleTimeString("en-US", {
+              hourCycle: "h24",
+              hour: "2-digit",
+              minute: "2-digit",
+            }),
           };
-
           temp.push(obj);
         });
 
