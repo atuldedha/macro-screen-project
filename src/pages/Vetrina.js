@@ -82,7 +82,6 @@ const Vetrina = () => {
       if (images.length > 0) {
         data = { ...data, images: urls };
       }
-      console.log(data);
 
       updateDoc(doc(db, "Customers", "d0bqIyQ9wx0FGrRhglRh"), { ...data })
         .then(() => {

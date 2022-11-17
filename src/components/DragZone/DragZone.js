@@ -20,7 +20,6 @@ const DragZone = ({ images, setImages }) => {
     setDragActive(false);
     if (e.dataTransfer.files && e.dataTransfer.files[0]) {
       const filesToUpload = Array.prototype.slice.call(e.dataTransfer.files);
-      console.log(filesToUpload);
       setImages([...images, ...filesToUpload]);
     }
   };

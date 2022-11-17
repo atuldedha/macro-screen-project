@@ -26,10 +26,6 @@ const EngagementOptionCard = ({ monthNumber }) => {
                   let stats1 = 0;
                   let stats7 = 0;
                   allStatSnapshot.docs.forEach((doc) => {
-                    console.log(
-                      new Date(doc.data().timestamp.toDate()).getMonth(),
-                      monthNumber
-                    );
                     if (
                       doc.data().statsType === 1 &&
                       new Date(doc.data().timestamp.toDate()).getMonth() ===

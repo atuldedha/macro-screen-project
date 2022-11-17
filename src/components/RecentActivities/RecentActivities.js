@@ -1,4 +1,4 @@
-import { collection, getDocs } from "firebase/firestore";
+import { collection, getDocs, orderBy, query } from "firebase/firestore";
 import React, { useEffect, useState } from "react";
 import { db } from "../../firebase";
 import RecentActivitiesCard from "./RecentActivitiesard/RecentActivitiesCard";
@@ -7,13 +7,18 @@ const RecentActivities = () => {
   const [data, setData] = useState([]);
   useEffect(() => {
     getDocs(collection(db, "Customers")).then((snapshot) => {
-      getDocs(
-        collection(db, "Customers", snapshot.docs[0].id, "recentActivities")
-      ).then((newSnapshot) => {
+      const q = query(
+        collection(db, "Customers", snapshot.docs[0].id, "recentActivities"),
+        orderBy("timestamp", "desc")
+      );
+      getDocs(q).then((newSnapshot) => {
         const temp = [];
         newSnapshot.docs.forEach((document) => {
           const obj = {
             text: document.data()?.text,
+            date: new Date(
+              document.data()?.timestamp.toDate()
+            ).toLocaleDateString(),
             timestamp: new Date(
               document.data()?.timestamp.toMillis()
             ).toLocaleTimeString(),
@@ -36,6 +41,7 @@ const RecentActivities = () => {
         <RecentActivitiesCard
           key={index}
           text={item.text}
+          date={item.date}
           timestamp={item.timestamp}
         />
       ))}
