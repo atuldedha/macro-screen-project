@@ -7,8 +7,8 @@ import ClickOptions from "./ClickOptions/ClickOptions";
 import PhoneIcon from "../../../images/callNew.png";
 import FacebookIcon from "../../../images/facebookNew.png";
 import InstagramIcon from "../../../images/instagramNew.png";
-import Application1 from "../../../images/clickApplicationIcon.png";
-import Application2 from "../../../images/clickApplicationIcon.png";
+import Application1 from "../../../images/application1Click.png";
+import Application2 from "../../../images/application2Click.png";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../../../firebase";
 
