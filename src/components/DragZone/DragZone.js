@@ -58,10 +58,10 @@ const DragZone = ({ images, setImages }) => {
             Seleziona dalla Galleria o{" "}
             <span className="text-lightPurple">dai File</span>
           </span>
-          <span className="text-[20px] leading-[30px] font-medium font-poppins text-black1 ">
+          <span className="text-[20px] leading-[30px] font-medium font-poppins text-black3 ">
             Solo Immagini in formato PNG
           </span>
-          <span className="font-poppins font-bold text-black1 text-[20px] leading-[30px] mb-[79px]">
+          <span className="font-poppins font-bold text-black3 text-[20px] leading-[30px] mb-[79px]">
             Max 5 MB
           </span>
           <div className="flex items-center space-x-4 w-full justify-start mb-[10px]">
